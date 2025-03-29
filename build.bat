@@ -93,13 +93,13 @@ rem ============================================================================
 
 rem compiler arguments
 set COMPILE_ARGS=/nologo /diagnostics:column /std:c11 /TC /MT /I "%PROJ_SRC_DIR%" "%PROJ_SRC_BUILD_FILE%"
-set RELEASE_COMPILE_ARGS=/O2 /DEBUG:None
-set DEBUG_COMPILE_ARGS=/O2 /Zi /DEBUG
-set DIAGNOSTIC_COMPILE_ARGS=/Od /Zi /DEBUG /W4 /Wall /WX /external:W3 /fsanitize=address
+set RELEASE_COMPILE_ARGS=/O2
+set DEBUG_COMPILE_ARGS=/O2 /Zi
+set DIAGNOSTIC_COMPILE_ARGS=/Od /Zi /W4 /Wall /WX /external:W3 /fsanitize=address
 
 rem linker arguments
 set LINK_ARGS=/SUBSYSTEM:console /out:%PROJ_NAME%.exe
-set RELEASE_LINK_ARGS=
+set RELEASE_LINK_ARGS=/DEBUG:None
 set DEBUG_LINK_ARGS=/DEBUG
 set DIAGNOSTIC_LINK_ARGS=/DEBUG
 
